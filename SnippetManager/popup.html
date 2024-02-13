@@ -3,23 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Password Manager</title>
+  <title>Snippet Manager</title>
   <link rel="stylesheet" href="/style.css">
   <script src="popup.js" defer></script>
 </head>
 <body>
   <div class="container">
-    <h1>Password Manager</h1>
-    <form id="passwordForm">
+    <h1>Snippet Manager</h1>
+    <a href="./fullaccess.html" target="_blank">access</a>
+    <form id="snippetForm">
       <div class="form-fields">
-        <input type="text" id="username" placeholder="Username">
-        <input type="password" id="password" placeholder="Password">
-        <input type="text" id="description" placeholder="Description">
+        <input type="text" id="title" placeholder="Title">
+        <textarea type="text" id="snippet" placeholder="Code Snippet"></textarea>
         <button type="submit">Save</button>
       </div>
     </form>
     <ul id="credentialsList">
-      <!-- List of saved credentials will be displayed here -->
     </ul>
   </div>
 </body>
