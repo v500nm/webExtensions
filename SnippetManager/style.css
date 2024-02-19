@@ -57,6 +57,7 @@ li {
   padding: 10px;
   background-color: #f4f4f4;
   border-radius: 5px;
+  margin: 5px;
 }
 .delete-icon {
   float: right;
@@ -70,4 +71,37 @@ li {
 .titleNameLI{
   font-size: 16px;
   font-weight: bold;
+}
+
+.view-icon,.copy-icon{
+  float: right;
+  padding-left: 2rem;
+  color: blue;
+  font-weight: 400;
+}
+.snippetBox {
+  padding: 5px;
+  min-width: 250px;
+  max-width: 250px; 
+  overflow-x: auto;   
+}
+
+
+.settings{
+  text-decoration: none;
+  color: black;
+  float: right;
+}
+
+.hover-message {
+  position: fixed;
+  top: 80%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  z-index: 9999;
 }

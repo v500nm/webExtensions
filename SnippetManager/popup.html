@@ -6,11 +6,16 @@
   <title>Snippet Manager</title>
   <link rel="stylesheet" href="/style.css">
   <script src="popup.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prettier/standalone/prettier.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.min.css">
 </head>
 <body>
   <div class="container">
-    <h1>Snippet Manager</h1>
-    <a href="./fullaccess.html" target="_blank">access</a>
+    <div class="heading">
+      <a href="./fullaccess.html" class="settings" target="_blank">Manage extension</a><br>
+      <h1>Snippet Manager</h1>
+    </div>
     <form id="snippetForm">
       <div class="form-fields">
         <input type="text" id="title" placeholder="Title">
@@ -23,3 +28,4 @@
   </div>
 </body>
 </html>
+ 

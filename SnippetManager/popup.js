@@ -42,11 +42,48 @@ document.addEventListener("DOMContentLoaded", function () {
       titleRender.textContent = `${snippetData.title}`;
       titleRender.className = "titleNameLI";
 
+      const snippetBox=document.createElement("p");
+      snippetBox.textContent="";
+      snippetBox.className="snippetBox";
+
       // Create delete icon
       const deleteIcon = document.createElement("span");
       deleteIcon.textContent = "X";
       deleteIcon.classList.add("delete-icon");
 
+      const viewIcon = document.createElement("span");
+      viewIcon.textContent = "View";
+      viewIcon.classList.add("view-icon");
+
+      const copyIcon = document.createElement("span");
+      copyIcon.textContent = "Copy";
+      copyIcon.classList.add("copy-icon");
+
+
+      copyIcon.addEventListener("click", function () {
+        var copyText = snippetData.snippet;
+        var textarea = document.createElement('textarea');
+        textarea.value = copyText;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+    
+        // Show the copied message
+        var hoverMessage = document.createElement('div');
+        hoverMessage.textContent = 'Copied!';
+        hoverMessage.classList.add('hover-message');
+    
+        // Append the hover message to the body
+        document.body.appendChild(hoverMessage);
+    
+        // Remove the hover message after a certain duration
+        setTimeout(function () {
+            document.body.removeChild(hoverMessage);
+        }, 2000); // Adjust the duration (in milliseconds) as needed
+    });
+    
+    
       // Add event listener to delete icon
       deleteIcon.addEventListener("click", function () {
         // Remove the corresponding entry from the list and the storage
@@ -55,11 +92,26 @@ document.addEventListener("DOMContentLoaded", function () {
         renderCredentialsList(credentialsArray);
       });
 
+      viewIcon.addEventListener("click", function () {
+        if (snippetBox.innerHTML === "") {
+            viewIcon.textContent = "Close";
+            const preElement = document.createElement("pre");
+            preElement.textContent = snippetData.snippet;
+            snippetBox.appendChild(preElement);
+            Prism.highlightElement(preElement);
+        } else {
+            viewIcon.textContent = "View";
+            snippetBox.innerHTML = "";
+        }
+    });
+
       // Append title, password, and delete icon to list item
       listItem.appendChild(titleRender);
-      listItem.appendChild(document.createElement("hr")); // Add line break
-      listItem.appendChild(document.createTextNode(snippetData.snippet)); // Add snippet
       listItem.appendChild(deleteIcon);
+      listItem.appendChild(document.createElement("hr")); 
+      listItem.appendChild(viewIcon);
+      listItem.appendChild(copyIcon);
+      listItem.appendChild(snippetBox); 
 
       credentialsList.appendChild(listItem);
     });
