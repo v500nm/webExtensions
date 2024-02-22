@@ -23,7 +23,8 @@ h1 {
   margin-bottom: 15px;
 }
 
-input[type="text"],textarea{
+input[type="text"],
+textarea {
   width: 80%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -68,12 +69,13 @@ li {
 .delete-icon:hover {
   text-decoration: underline;
 }
-.titleNameLI{
+.titleNameLI {
   font-size: 16px;
   font-weight: bold;
 }
 
-.view-icon,.copy-icon{
+.view-icon,
+.copy-icon {
   float: right;
   padding-left: 2rem;
   color: blue;
@@ -82,12 +84,11 @@ li {
 .snippetBox {
   padding: 5px;
   min-width: 250px;
-  max-width: 250px; 
-  overflow-x: auto;   
+  max-width: 250px;
+  overflow-x: auto;
 }
 
-
-.settings{
+.settings {
   text-decoration: none;
   color: black;
   float: right;
