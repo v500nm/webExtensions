@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
   chrome.storage.local.get("snippetData", function (data) {
     const enteredSnippet = data.snippetData || [];
     renderCredentialsList(enteredSnippet);
-  });
+    Prism.highlightAll(); // Initialize Prism.js after adding code blocks
+});
 
   // Function to render snippetData list
   function renderCredentialsList(credentialsArray) {
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Append the card to the credentialsList container
       credentialsList.appendChild(card);
+      
 
       // Add event listener for the delete icon of this specific card
       const deleteIcon = card.querySelector(".remove");
@@ -88,3 +90,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+document.addEventListener("DOMContentLoaded", function() {
+  var toggleCheckbox = document.getElementById('toggleCheckbox');
+  toggleCheckbox.addEventListener('change', function() {
+      toggleView();
+  });
+});
+
+function toggleView() {
+  var checkbox = document.getElementById('toggleCheckbox');
+  if (checkbox.checked) {
+      document.body.classList.add('night');
+  } else {
+      document.body.classList.remove('night');
+  }
+}

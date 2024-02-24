@@ -3,9 +3,15 @@ body {
   margin: 0;
   padding: 0;
 }
-body {
-  background-color: aliceblue;
+
+body.day {
+  background-color: rgb(240, 248, 251); 
 }
+
+body.night {
+  background-color: rgb(26, 26, 27); 
+}
+
 nav {
   background-color: rgb(157, 194, 246);
   padding: 25px;
@@ -84,12 +90,10 @@ nav .Access {
 }
 
 #button-9 .knobs:before {
-  content: "YES";
   left: 2px;
 }
 
 #button-9 .knobs:after {
-  content: "NO";
   right: -26px;
 }
 
@@ -115,7 +119,7 @@ nav .Access {
 
 #button-9 .checkbox:checked + .knobs span {
   left: 30px;
-  background-color: #f44336;
+  background-color: black;
 }
 
 #button-9 .checkbox:checked ~ .layer {

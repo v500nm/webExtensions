@@ -90,19 +90,45 @@ li {
 
 .settings {
   text-decoration: none;
-  color: black;
+  color: white;
   float: right;
+  font-size: 10px;
+  width: 22%;
+  border-radius:0;
 }
 
 .hover-message {
   position: fixed;
-  top: 80%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  display: inline-block;
+  top: 12%;
+  right: 10px; /* Adjust as needed */
+  background-color: white;
+  color: black;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
   z-index: 9999;
+  box-shadow: 4px 4px 6px 4px rgba(139, 189, 251, 0.3); /* Add shadow for depth */
+  overflow: hidden; /* Hide overflow content */
+  animation: slideIn 0.5s forwards, fadeOut 2s 1.5s forwards; /* Apply animations */
+}
+
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

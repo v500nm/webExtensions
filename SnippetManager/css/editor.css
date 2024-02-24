@@ -11,8 +11,8 @@
   margin-bottom: 20px;
   background-color: #f5f5f5;
   border-radius: 8px;
-  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
   padding: 16px;
+  box-shadow:2px 2px 4px 4px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
 .card .title {
@@ -43,13 +43,37 @@
   position: fixed;
   top: 12%;
   right: 10px; /* Adjust as needed */
-  background-color: #333;
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 4px;
+  background-color: white;
+  color: black;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
   z-index: 9999;
+  box-shadow: 4px 4px 6px 4px rgba(139, 189, 251, 0.3); /* Add shadow for depth */
+  overflow: hidden; /* Hide overflow content */
+  animation: slideIn 0.5s forwards, fadeOut 2s 1.5s forwards; /* Apply animations */
 }
 
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .editor {
   display: flex;
 }
