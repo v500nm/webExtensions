@@ -43,8 +43,8 @@
   position: fixed;
   top: 12%;
   right: 10px; /* Adjust as needed */
-  background-color: white;
-  color: black;
+  background-color: #007C7C;
+  color: white;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   z-index: 9999;

@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   chrome.storage.local.get("snippetData", function (data) {
     const enteredSnippet = data.snippetData || [];
     renderCredentialsList(enteredSnippet);
-    Prism.highlightAll(); // Initialize Prism.js after adding code blocks
 });
 
   // Function to render snippetData list
